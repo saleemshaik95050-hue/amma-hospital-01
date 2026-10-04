@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    overflow-x: hidden;
+  }
+}
+
+/* AMMA Hospital Logo-Matched Ambient Canvas (Royal Blue + Leaf Green + Pure White) */
+.amma-theme-bg {
+  background-color: #ffffff;
+  background-image: 
+    radial-gradient(circle at 10% 10%, rgba(0, 84, 166, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 90% 15%, rgba(22, 148, 60, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 50% 55%, rgba(0, 84, 166, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 85% 90%, rgba(22, 148, 60, 0.04) 0%, transparent 45%);
+}
+
+/* Animations */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.94; transform: scale(1.012); }
+}
+
+@keyframes blue-green-glow {
+  0%, 100% { opacity: 0.35; filter: blur(50px); }
+  50% { opacity: 0.65; filter: blur(75px); }
+}
+
+@keyframes ecg-flow {
+  0% { stroke-dashoffset: 600; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes beacon-flash {
+  0%, 100% { opacity: 0.35; transform: scale(0.95); }
+  50% { opacity: 1; transform: scale(1.15); filter: drop-shadow(0 0 6px #16943c); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-brand-glow {
+  animation: blue-green-glow 6s ease-in-out infinite;
+}
+
+.animate-ecg {
+  stroke-dasharray: 600;
+  animation: ecg-flow 3.5s linear infinite;
+}
+
+.animate-beacon {
+  animation: beacon-flash 1.6s ease-in-out infinite;
+}
+
+/* Logo-Matched Glass & Cards */
+.brand-glass {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 84, 166, 0.12);
+}
+
+.brand-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 84, 166, 0.12);
+  box-shadow: 0 10px 30px -5px rgba(0, 84, 166, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+}
+
+.brand-card:hover {
+  border-color: rgba(22, 148, 60, 0.4);
+  box-shadow: 0 20px 35px -5px rgba(0, 84, 166, 0.1), 0 0 15px rgba(22, 148, 60, 0.08);
+}
+
+.glow-blue {
+  box-shadow: 0 10px 25px -5px rgba(0, 84, 166, 0.3);
+}
+
+.glow-green {
+  box-shadow: 0 10px 25px -5px rgba(22, 148, 60, 0.3);
+}
+
+/* Gradient typography */
+.text-gradient-brand {
+  background: linear-gradient(135deg, #0054a6 0%, #004182 60%, #16943c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-green {
+  background: linear-gradient(135deg, #16943c 0%, #15803d 50%, #0054a6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom scrollbar for logo theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #0054a6;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #16943c;
+}

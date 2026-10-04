@@ -1,0 +1,6 @@
+{
+  "name": "AMMA Hospital Kamareddy",
+  "description": "AMMA Hospital - General & Critical Care, Maternity, Ortho & Trauma Care Centre in Kamareddy, Telangana. Compassionate Care, Advanced Treatment, Better Health.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
